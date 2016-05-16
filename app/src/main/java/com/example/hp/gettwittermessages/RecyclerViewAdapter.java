@@ -27,7 +27,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         viewHolder.title.setText(twitterMessage.getMessageTitle());
         viewHolder.description.setText(twitterMessage.getMessageDescription());
-
     }
 
     @Override
