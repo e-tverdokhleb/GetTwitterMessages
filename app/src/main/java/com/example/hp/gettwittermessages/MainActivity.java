@@ -2,18 +2,21 @@ package com.example.hp.gettwittermessages;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
-    TextView textView1;
+    SwipeRefreshLayout swipeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +35,14 @@ public class MainActivity extends Activity {
         recycleView.setLayoutManager(layoutManager);
         recycleView.setItemAnimator(itemAnimator);
 
-        textView1 = (TextView) findViewById(R.id.textView1);
-        textView1.setText(String.valueOf(twitterMessageList.size()));
+//        swipeLayout = (SwipeRefreshLayout)findViewById(R.id.swipe_container);
+//        swipeLayout.setOnRefreshListener((SwipeRefreshLayout.OnRefreshListener) this);
+//        swipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+//                android.R.color.holo_green_light,
+//                android.R.color.holo_orange_light,
+//                android.R.color.holo_red_light);
     }
+
 
     private void generateRecords(List<TwitterMessage> twitterMessageList, int count){
 
