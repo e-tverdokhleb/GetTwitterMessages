@@ -21,10 +21,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         List<TwitterMessage> twitterMessageList = new ArrayList<TwitterMessage>();
-        generateRecords(twitterMessageList, 10);
+        generateRecords(twitterMessageList, 4);
 
         RecyclerView recycleView = (RecyclerView) findViewById(R.id.recyclerView1);
-        RecycleViewAdapter adapter = new RecycleViewAdapter(twitterMessageList);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(twitterMessageList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
 

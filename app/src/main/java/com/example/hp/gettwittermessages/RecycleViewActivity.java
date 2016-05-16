@@ -6,7 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import com.example.hp.gettwittermessages.RecycleViewAdapter;
+import com.example.hp.gettwittermessages.RecyclerViewAdapter;
 import java.util.List;
 import com.example.hp.gettwittermessages.TwitterMessage;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class RecycleViewActivity extends Activity {
         populateRecords(twitterMessageList);
 
         RecyclerView recycleView = (RecyclerView) findViewById(R.id.recyclerView1);
-        RecycleViewAdapter adapter = new RecycleViewAdapter(twitterMessageList);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(twitterMessageList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         RecyclerView.ItemAnimator itemAnimatior = new DefaultItemAnimator();
 
