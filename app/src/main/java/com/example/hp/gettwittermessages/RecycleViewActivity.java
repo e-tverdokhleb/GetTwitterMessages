@@ -21,7 +21,7 @@ public class RecycleViewActivity extends Activity {
         List<TwitterMessage> twitterMessageList = new ArrayList<TwitterMessage>();
         populateRecords(twitterMessageList);
 
-        RecyclerView recycleView = (RecyclerView) findViewById(R.id.recycleView);
+        RecyclerView recycleView = (RecyclerView) findViewById(R.id.recyclerView1);
         RecycleViewAdapter adapter = new RecycleViewAdapter(twitterMessageList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         RecyclerView.ItemAnimator itemAnimatior = new DefaultItemAnimator();
@@ -34,7 +34,8 @@ public class RecycleViewActivity extends Activity {
 
     private void populateRecords(List<TwitterMessage> twitterMessageList){
         for (int i=0; i<10; i++){
-            TwitterMessage twitterMessage = new TwitterMessage("Good News " + String.valueOf(i),"hi  here this is good news from SpaceX",System.currentTimeMillis());
+            TwitterMessage twitterMessage = new TwitterMessage("Good News " +
+                    String.valueOf(i),"hi  here this is good news from SpaceX",System.currentTimeMillis());
         }
     }
 }

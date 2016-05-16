@@ -1,6 +1,6 @@
 package com.example.hp.gettwittermessages;
 
-class TwitterMessage {
+public class TwitterMessage {
     private String title;
     private String desc;
     private long time;
